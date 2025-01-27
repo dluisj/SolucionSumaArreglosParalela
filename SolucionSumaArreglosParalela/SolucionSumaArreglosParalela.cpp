@@ -4,7 +4,7 @@
 #include <iostream>
 #include <omp.h>
 
-#define N 1000
+#define N 10
 #define chunk 100
 #define mostrar 10
 
@@ -18,10 +18,18 @@ int main()
     float a[N], b[N], c[N];
     int i;
     
+    std::cout << "Introduce 10 valores para el arreglo a: \n";
     for (i = 0; i < N; i++)
     {
-        a[i] = + i * 10;
-        b[i] = (i + 3) * 3.7;
+        std::cout << "a[" << i << "]: ";
+        std::cin >> a[i];
+    }
+
+    std::cout << "Introduce 10 valores para el arreglo b: \n";
+    for (i = 0; i < N; i++)
+    {
+        std::cout << "b[" << i << "]: ";
+        std::cin >> b[i];
     }
     int pedazos = chunk;
 
